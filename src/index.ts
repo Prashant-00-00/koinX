@@ -17,6 +17,7 @@ connectDB();
 fetchCryptoPrices();
 cron.schedule('0 */2 * * *', () => {
   console.log('Fetching cryptocurrency prices...');
+fetchCryptoPrices();
 });
 
 app.listen(PORT, () => {
